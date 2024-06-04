@@ -22,6 +22,7 @@
                             </button>
                         </div>
                         <ComboboxInput @input="query = $event.target.value" class="combobox-input"
+                                        @click="$event.target.value"
                                        :class="{'combobox-input--has-selected-options': selectedOptions.length > 0}"/>
                         <ComboboxButton class="combobox-button">
                             <svg class="flex-shrink-0 pointer-events-none form-select-arrow" xmlns="http://www.w3.org/2000/svg" width="10" height="6" viewBox="0 0 10 6"><path class="fill-current" d="M8.292893.292893c.390525-.390524 1.023689-.390524 1.414214 0 .390524.390525.390524 1.023689 0 1.414214l-4 4c-.390525.390524-1.023689.390524-1.414214 0l-4-4c-.390524-.390525-.390524-1.023689 0-1.414214.390525-.390524 1.023689-.390524 1.414214 0L5 3.585786 8.292893.292893z"></path></svg>
@@ -218,12 +219,17 @@ function onClick(e) {
 }
 
 .selected-option-button {
+    font-style: bo;
     height: 22px;
     margin: 5px 5px 0 0;
     padding: 1px 25px 1px 5px;
     position: relative;
-    background-color: rgba(var(--colors-primary-500));
+    background: var(--ms-tag-bg, #10b981);
+    // background-color: rgba(var(--colors-green-600));
     color: white;
+    font-weight: var(--ms-tag-font-weight, 600);
+    
+
     border-radius: 4px;
 
     & > :last-child {
@@ -241,7 +247,7 @@ function onClick(e) {
     }
 
     &:hover > :last-child {
-        background-color: rgba(var(--colors-primary-600));
+        background-color: rgba(var(--colors-green-750));
 
         & > * {
             fill: white;
@@ -251,6 +257,7 @@ function onClick(e) {
 
 .combobox-options {
     width: 100%;
+    padding-left: 0px;
     max-height: 200px;
     padding-bottom: .25rem;
     padding-top: .25rem;
@@ -279,6 +286,7 @@ function onClick(e) {
 
 .combobox-option {
     padding: .5rem 1rem .5rem 2.5rem;
+    
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
@@ -294,7 +302,9 @@ function onClick(e) {
 
     &--is-active,
     &:hover {
-        background-color: rgba(var(--colors-primary-500));
+        background: var(--ms-tag-bg, #10b981);
+
+        // background-color: rgba(var(--color-green-600));
         color: white;
     }
 
