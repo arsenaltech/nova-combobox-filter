@@ -32,7 +32,6 @@
                             :key="option.value"
                             :value="option.value"
                             as="template"
-                            @click="removeSearchValue"
                             v-slot="{active, selected}"
                         >
                             <li class="combobox-option" :class="{'combobox-option--is-active': active, 'combobox-option--is-selected': selected}">
@@ -139,9 +138,6 @@ function onClick(e) {
     }
 
     selectedOptionListEl.value.nextElementSibling.focus();
-}
-function removeSearchValue() {
-    $('#headlessui-combobox-input-1').val('');
 }
 </script>
 
