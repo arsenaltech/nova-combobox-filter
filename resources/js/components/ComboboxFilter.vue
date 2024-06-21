@@ -301,10 +301,8 @@ function onClick(e) {
 
     &--is-active,
     &:hover {
-        background: var(--ms-tag-bg, #10b981);
-
-        // background-color: rgba(var(--color-green-600));
-        color: white;
+        background: var(--ms-option-bg-pointed, #F3F4F6);
+        color: var(--ms-option-color-pointed, #1F2937);
     }
 
     &__label {
