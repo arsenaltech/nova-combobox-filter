@@ -218,12 +218,17 @@ function onClick(e) {
 }
 
 .selected-option-button {
+    font-style: bo;
     height: 22px;
     margin: 5px 5px 0 0;
     padding: 1px 25px 1px 5px;
     position: relative;
-    background-color: rgba(var(--colors-primary-500));
+    background: var(--ms-tag-bg, #10b981);
+    // background-color: rgba(var(--colors-green-600));
     color: white;
+    font-weight: var(--ms-tag-font-weight, 600);
+    
+
     border-radius: 4px;
 
     & > :last-child {
@@ -241,7 +246,7 @@ function onClick(e) {
     }
 
     &:hover > :last-child {
-        background-color: rgba(var(--colors-primary-600));
+        background-color: rgba(var(--colors-green-750));
 
         & > * {
             fill: white;
@@ -251,6 +256,7 @@ function onClick(e) {
 
 .combobox-options {
     width: 100%;
+    padding-left: 0px;
     max-height: 200px;
     padding-bottom: .25rem;
     padding-top: .25rem;
@@ -279,6 +285,7 @@ function onClick(e) {
 
 .combobox-option {
     padding: .5rem 1rem .5rem 2.5rem;
+    
     font-size: 14px;
     line-height: 16px;
     cursor: pointer;
@@ -294,8 +301,8 @@ function onClick(e) {
 
     &--is-active,
     &:hover {
-        background-color: rgba(var(--colors-primary-500));
-        color: white;
+        background: var(--ms-option-bg-pointed, #F3F4F6);
+        color: var(--ms-option-color-pointed, #1F2937);
     }
 
     &__label {
